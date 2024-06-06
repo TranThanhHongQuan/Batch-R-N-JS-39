@@ -1,0 +1,13 @@
+.buttonn_itemGioHang {
+    background-color: orange;
+    color: white;
+}
+.buttonn_itemGoi {
+    background-color: orange ;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    appearance: none;
+    padding: 8px 10px;
+    margin-left: 10px;
+}

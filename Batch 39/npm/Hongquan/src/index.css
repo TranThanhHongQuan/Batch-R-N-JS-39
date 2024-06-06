@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    button {
+        @apply bg-orange-700 text-white py-1 px-3 rounded hover:bg-indigo-500
+    }
+    input{
+        @apply py-1 px-3 rounded border-collapse
+    }
+    .btn_like {
+        @apply bg-black text-sky-300 hover:bg-white
+    }
+    .btn_Inlike{
+        @apply bg-sky-600
+    }
+}

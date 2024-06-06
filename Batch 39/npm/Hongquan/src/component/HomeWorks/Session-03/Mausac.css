@@ -1,0 +1,8 @@
+.mau_item{
+    padding: 5px 10px;
+    border: 4px solid #fff;
+    margin-left: 10px;
+}
+.mau_item:hover{
+    border: 4px solid #222;
+}

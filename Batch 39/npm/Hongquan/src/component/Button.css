@@ -1,0 +1,28 @@
+.button_item {
+    background-color: orange ;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    appearance: none;
+    padding: 8px 10px;
+    margin-left: 10px;
+}
+.button_no {
+    background-color: red ;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    appearance: none;
+    padding: 8px 10px;
+    margin-left: 10px;
+}
+.button_xu{
+    background-color: orange;
+    border:1px solid #222;
+    color: #222;
+}
+.button_xu:hover{
+    background-color: #222;
+    border:1px solid #fff;
+    color: #fff;
+}
