@@ -10,10 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.45.0",
+    "@types/swiper": "^6.0.0",
+    "ant-design": "^1.0.0",
+    "antd": "^5.18.1",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1",
+    "react-swiper": "^0.1.5",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.43.1",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

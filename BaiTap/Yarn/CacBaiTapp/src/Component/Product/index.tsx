@@ -50,7 +50,7 @@ const columns: TableProps<DataType>['columns'] = [
 
 const Product = () => {
   const getProduct = async() =>{
-    return axios.get('https://api.escuelajs.co/api/v1/products').then(res => res.data)
+    return axios.get(' https://api.escuelajs.co/api/v1/categories').then(res => res.data)
   }
     const { isPending, error, data } = useQuery<DataType[],Error>({
       queryKey: ['products'],
@@ -61,9 +61,13 @@ const Product = () => {
     if (isPending) return 'Loading...'
 
     if (error) return 'An error has occurred: ' + error.message
+    const dataSource = data?.map(item => ({
+        ...item,
+        key: item.id,
+      }));
     return (
       <div>
-          <Table columns={columns} dataSource={data} />;
+          <Table columns={columns} dataSource={dataSource} />;
       </div>
       
       )

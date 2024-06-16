@@ -1,5 +1,6 @@
 import React from 'react'
-import Addcategories from './AddCategories.tsx'
+import axios from 'axios';
+import Addcategories from './Addcategories'
 type TCotegory = {
   id: string;
   name: string;
@@ -8,27 +9,28 @@ type TCotegory = {
 type TCotegories = TCotegory[];
 
 
-const Categories = () => {
+const CategoriesAxios = () => {
     const [categories,setCategories] = React.useState<TCotegories>([])
     console.log(categories)
   React.useState(()=>{
     const fetchData = async () =>
         {
             const url = 'https://api.escuelajs.co/api/v1/categories';
-            const options ={
-                method: 'GET',
-            };
-            const response = await fetch(url, options);
-            const data = await response.json();
-            console.log(data)
-            setCategories(data)
+            //const options ={
+            //     method: 'GET',
+            // };
+            //const response = await fetch(url, options);
+            //const data = await response.json();
+            const response = await axios.get(url)
+            console.log(response.data)
+            setCategories(response.data)
         };
         fetchData();
-  },[]);
+  },  []);
   return (
     <div>
-        <div><Addcategories/></div>
-        <h1 className='text-3xl'>Categories</h1>
+      <div><Addcategories/></div>
+        <h1 className='text-3xl'>Categories 2</h1>
         <table className="min-w-full bg-white">
         <thead>
           <tr>
@@ -54,4 +56,4 @@ const Categories = () => {
   )
 }
 
-export default Categories;
+export default CategoriesAxios;
